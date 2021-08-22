@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personne{% endblock %}
+
+{% block body %}
+    <h1>Personne</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ personne.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ personne.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ personne.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Civilite</th>
+                <td>{{ personne.civilite ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>DateNaiss</th>
+                <td>{{ personne.dateNaiss }}</td>
+            </tr>
+            <tr>
+                <th>SituationFamiliale</th>
+                <td>{{ personne.situationFamiliale }}</td>
+            </tr>
+            <tr>
+                <th>NombreEnfant</th>
+                <td>{{ personne.nombreEnfant }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ personne.email }}</td>
+            </tr>
+            <tr>
+                <th>Telephone1</th>
+                <td>{{ personne.telephone1 }}</td>
+            </tr>
+            <tr>
+                <th>Telephone2</th>
+                <td>{{ personne.telephone2 }}</td>
+            </tr>
+            <tr>
+                <th>Mobile</th>
+                <td>{{ personne.mobile }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ personne.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ personne.pays }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ personne.ville }}</td>
+            </tr>
+            <tr>
+                <th>Rue</th>
+                <td>{{ personne.rue }}</td>
+            </tr>
+            <tr>
+                <th>NumRue</th>
+                <td>{{ personne.numRue }}</td>
+            </tr>
+            <tr>
+                <th>ComplementAdresse</th>
+                <td>{{ personne.complementAdresse }}</td>
+            </tr>
+            <tr>
+                <th>MotCle</th>
+                <td>{{ personne.motCle }}</td>
+            </tr>
+            <tr>
+                <th>Commenataire</th>
+                <td>{{ personne.commenataire }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('personne_index') }}">back to list</a>
+
+    <a href="{{ path('personne_edit', {'id': personne.id}) }}">edit</a>
+
+    {{ include('personne/_delete_form.html.twig') }}
+{% endblock %}
