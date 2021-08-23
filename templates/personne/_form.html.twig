@@ -13,6 +13,10 @@
 
     {% block stylesheets %}
 <style>
+
+    .btn{
+        background: skyblue;
+    }
     * {
         margin: 0;
         padding: 0
@@ -150,7 +154,8 @@
         z-index: 0;
         border: none;
         border-radius: 0.5rem;
-        position: relative
+        position: relative;
+
     }
 
     .fs-title {
@@ -281,7 +286,7 @@
                                 <li id="confirm"><strong>Informations complémentaires</strong></li>
                             </ul> <!-- fieldsets -->
                             <fieldset>
-                                <div class="form-card" style="width: 100%;" >
+                                <div class="form-card" style="width: 99%;" >
                                     <h2 class="fs-title">- Identité</h2> <br>
                                     <div class="row" >
                                         <div class="col-sm-3"  style="padding: 28px 8px 4px 8px;">
@@ -407,7 +412,7 @@
                                     </div>
                                 </div>
 
-                                <button class="btn btn-info">{{ button|default('Enregistrer') }}</button>
+                                <button class="btn ">{{ button|default('Enregistrer') }}</button>
 
                             </fieldset>
                     </div>
