@@ -116,6 +116,16 @@ class Personne
      */
     private $codePostal;
 
+    /**
+     * @ORM\Column(type="string", length=255,nullable=true))
+     */
+    private $etat;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $etatPhysique;
+
 
     public function getId(): ?int
     {
@@ -354,6 +364,30 @@ class Personne
     public function __toString()
     {
         return $this->getSituationFamiliale();
+    }
+
+    public function getEtat(): ?string
+    {
+        return $this->etat;
+    }
+
+    public function setEtat(string $etat): self
+    {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    public function getEtatPhysique(): ?string
+    {
+        return $this->etatPhysique;
+    }
+
+    public function setEtatPhysique(string $etatPhysique): self
+    {
+        $this->etatPhysique = $etatPhysique;
+
+        return $this;
     }
 
 

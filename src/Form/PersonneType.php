@@ -43,11 +43,32 @@ class PersonneType extends AbstractType
                 'format' => 'yyyy-MM-dd',
 
             ])
-            ->add('situationFamiliale', null, [
-                'attr' => [
-                    'placeholder' => 'Situation familiale ',
-
-                    'title' => 'form.order.lastName.title', ],
+            ->add('situationFamiliale', ChoiceType::class, [
+                'choices'  => [
+                    'situation Familiale' => null,
+                    'NR' => true,
+                    'Marié(e)' => false,
+                    'veuf' => true,
+                    'Pacsé(e)' => false,
+                    'divorcé' => true,
+                ],
+            ])
+            ->add('etat', ChoiceType::class, [
+                'choices'  => [
+                    'Etat Social' => null,
+                    'Chomeur' => true,
+                    'Employé' => false,
+                    'diplomé' => true,
+                    'Etudiant' => false,
+                    'retraité' => true,
+                ],
+            ])
+            ->add('etatPhysique', ChoiceType::class, [
+                'choices'  => [
+                    'Etat physique' => null,
+                    'handicapé' => true,
+                    'bien décès' => false,
+                ],
             ])
             ->add('nombreEnfant', null, [
                 'attr' => [
