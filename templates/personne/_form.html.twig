@@ -283,51 +283,53 @@
                             <fieldset>
                                 <div class="form-card">
                                     <h2 class="fs-title">- Identité</h2> <br>
-                                        <div class="row">
-                                            <div class="col-sm-4" style="padding: 3px 8px 4px 8px;"class="fas fa-user">                                            {{  form_row(form.nom)  }}
+                                    <div class="row" >
+                                        <div class="col-sm-3"  style="padding: 28px 8px 4px 8px;">
+                                            {{  form_widget(form.civilite )  }}
                                         </div>
-                                        <div class="col-sm-4">
-                                                {{  form_row(form.prenom )  }}
+                                        <div class="col-sm-3" style="margin-left: 50px;">
+                                            <i class="fas fa-user" ></i>
+                                            {{  form_widget(form.nom )  }}
                                         </div>
-                                    <div class="col-sm-4" style="padding: 36px 8px 4px 8px;">
-                                            {{  form_row(form.civilite )  }}
+                                        <div class="col-sm-3" style="margin-left: 100px;">
+                                            <i class="fas fa-user"></i>
+                                            {{  form_widget(form.prenom )  }}
+                                        </div>
                                     </div>
-                                        </div>
                                     <div class="col-sm-20">
-                                            {{ form_row(form.dateNaissance, {'attr' : {'class':'input2' } } )  }}
+                                        {{ form_widget(form.dateNaissance, {'attr' : {'class':'input2' } } )  }}
                                     </div>
 
                                     <div class="col-sm-20">
-                                            {{  form_row(form.situationFamiliale, {'attr' : {'class':'input2' } } )  }}
+                                        {{  form_widget(form.situationFamiliale, {'attr' : {'class':'input2' } } )  }}
                                     </div>
                                     <div class="col-sm-20">
-                                            {{  form_row(form.nombreEnfant, {'attr' : {'class':'input2' } } )  }}
+                                        <i class="fas fa-users"></i>
+
+                                        {{  form_widget(form.nombreEnfant, {'attr' : {'class':'input2' } } )  }}
                                     </div>
+
 
                                 </div> <input type="button" name="next" class="next action-button" value="Next Step" />
                             </fieldset>
                             <fieldset>
-                                <div class="form-card">
+                                <div class="form-card"style="width: 80%;">
                                     <h2 class="fs-title">- Contact</h2>
                                     <div class="col-50">
                                         <div class="input-group">
-                                            {{  form_row(form.email, {'attr' : {'class':'input2' } } )  }}
+                                            <i class="fas fa-envelope-square"></i>
+                                            {{  form_widget(form.email, {'attr' : {'class':'input2' } } )  }}
                                         </div>
                                     </div>
                                     <div class="col-50">
-                                        <div class="input-group">
-                                            {{  form_row(form.telephone1, {'attr' : {'class':'input2' } } )  }}
-                                        </div>
+                                        <i class="flag flag-france"></i> <i class="fas fa-phone"></i>
+                                        {{  form_widget(form.telephone1, {'attr' : {'class':'input2' } } )  }}
                                     </div>
                                     <div class="col-50">
-                                        <div class="input-group">
-                                            {{  form_row(form.telephone2, {'attr' : {'class':'input2' } } )  }}
-                                        </div>
+                                        <i class="flag flag-france"></i> <i class="fas fa-phone"></i>                                            {{  form_widget(form.telephone2, {'attr' : {'class':'input2' } } )  }}
                                     </div>
                                     <div class="col-50">
-                                        <div class="input-group">
-                                            {{  form_row(form.mobile, {'attr' : {'class':'input2' } } )  }}
-                                        </div>
+                                        <i class="flag flag-france"></i> <i class="fas fa-phone"></i>                                            {{  form_widget(form.mobile, {'attr' : {'class':'input2' } } )  }}
                                     </div>
                                 </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                 <input type="button" name="next" class="next action-button" value="Next Step" />
@@ -336,48 +338,50 @@
                                 <div class="form-card">
                                     <h2 class="fs-title">- Adresse</h2>
                                     <div class="col-sm-20">
-                                        {{  form_row(form.adresse, {'attr' : {'class':'input2' } } )  }}
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        {{  form_widget(form.adresse, {'attr' : {'class':'input2' } } )  }}
                                     </div>
                                     <div class="row row-space">
                                         <div class="col-5">
                                             <div class="input-group">
-                                                {{  form_row(form.pays, {'attr' : {'class':'input2' } } )  }}
+                                                <i class="flag flag-france"></i>
+                                                {{  form_widget(form.pays, {'attr' : {'class':'input2' } } )  }}
                                             </div>
                                         </div>
                                         <div class="col-5">
                                             <div class="input-group">
-                                                {{ form_row(form.ville, {'attr' : {'class':'input2' } } )  }}
+                                                {{ form_widget(form.ville, {'attr' : {'class':'input2' } } )  }}
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-4" style="padding: 3px 8px 4px 8px;">
-                                            {{  form_row(form.rue, {'attr' : {'class':'fa fa-camera' } } )  }}
+                                    <div class="row" >
+                                        <div class="col-sm-3" >
+                                            {{  form_widget(form.rue )  }}
                                         </div>
-                                        <div class="col-sm-4">
-                                            {{  form_row(form.numRue )  }}
+                                        <div class="col-sm-3" style="margin-left: 50px;">
+                                            {{  form_widget(form.numRue )  }}
                                         </div>
-                                        <div class="col-sm-4" style="padding: 0px 8px 4px 8px;">
-                                            {{  form_row(form.CodePostal )  }}
+                                        <div class="col-sm-3" style="margin-left: 100px;">
+                                            {{  form_widget(form.codePostal )  }}
                                         </div>
                                     </div>
                                     <div class="col-sm-20">
-                                    {{ form_row(form.complementAdresse, {'attr' : {'class':'input2' } } )  }}
+                                    {{ form_widget(form.complementAdresse, {'attr' : {'class':'input2' } } )  }}
                                     </div>
 
                                 </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
                             </fieldset>
 
                             <fieldset>
-                                <div class="form-card">
+                                <div class="form-card"style="width: 110%;">
                                         <h2 class="fs-title">- Informations Complémentaires</h2>
                                     <div class="col-50">
                                         <div class="input-group">
-                                            {{  form_row(form.motCle, {'attr' : {'class':'input2' } } )  }}
+                                            {{  form_widget(form.motCle, {'attr' : {'class':'input2' } } )  }}
                                         </div>
                                         <div class="col-50">
                                             <div class="input-group">
-                                                {{  form_row(form.commenataire, {'attr' : {'class':'input2'} } )  }}
+                                                {{  form_widget(form.commenataire, {'attr' : {'class':'input2'} } )  }}
                                             </div>
                                         </div>
                                     </div>
@@ -387,7 +391,7 @@
 
 
                     </div>
-                        {{ form_widget(form) }}
+
                         <button class="btn">{{ button_label|default('Save') }}</button>
                         {{ form_end(form) }}
                     </div>
@@ -396,20 +400,16 @@
         </div>
     </div>
 </div>
+
 <script>
     $(document).ready(function(){
-
         var current_fs, next_fs, previous_fs; //fieldsets
         var opacity;
-
         $(".next").click(function(){
-
             current_fs = $(this).parent();
             next_fs = $(this).parent().next();
-
 //Add Class Active
             $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
 //show the next fieldset
             next_fs.show();
 //hide the current fieldset with style
@@ -417,7 +417,6 @@
                 step: function(now) {
 // for making fielset appear animation
                     opacity = 1 - now;
-
                     current_fs.css({
                         'display': 'none',
                         'position': 'relative'
@@ -427,24 +426,18 @@
                 duration: 600
             });
         });
-
         $(".previous").click(function(){
-
             current_fs = $(this).parent();
             previous_fs = $(this).parent().prev();
-
 //Remove class active
             $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
 //show the previous fieldset
             previous_fs.show();
-
 //hide the current fieldset with style
             current_fs.animate({opacity: 0}, {
                 step: function(now) {
 // for making fielset appear animation
                     opacity = 1 - now;
-
                     current_fs.css({
                         'display': 'none',
                         'position': 'relative'
@@ -454,16 +447,13 @@
                 duration: 600
             });
         });
-
         $('.radio-group .radio').click(function(){
             $(this).parent().find('.radio').removeClass('selected');
             $(this).addClass('selected');
         });
-
         $(".submit").click(function(){
             return false;
         })
-
     });
 </script>
 </body>

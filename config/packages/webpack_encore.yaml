@@ -5,8 +5,9 @@ webpack_encore:
     # output_path: false
 
     # Set attributes that will be rendered on all script and link tags
+
     script_attributes:
-        defer: true
+        defer: false
         # Uncomment (also under link_attributes) if using Turbo Drive
         # https://turbo.hotwire.dev/handbook/drive#reloading-when-assets-change
         # 'data-turbo-track': reload
@@ -33,3 +34,6 @@ webpack_encore:
     # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)
     # Put in config/packages/prod/webpack_encore.yaml
     # cache: true
+# config/packages/webpack_encore.yaml
+
+

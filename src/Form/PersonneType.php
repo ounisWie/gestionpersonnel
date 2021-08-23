@@ -17,11 +17,18 @@ class PersonneType extends AbstractType
         $builder
             ->add('nom', null, [
                 'attr' => [
-                    'title' => 'form.order.nom.title', ],
+                    'placeholder' => 'Nom ',
+                    'title' => 'form.order.nom.title',
+                    'style' => 'width: 160%;'
+                ],
             ])
             ->add('prenom', null, [
                 'attr' => [
-                    'title' => 'form.order.prenom.title', ],
+                    'placeholder' => 'Prénom ',
+                    'title' => 'form.order.prenom.title',
+                    'style' => 'width: 130%;'
+
+                ],
             ])
             ->add('civilite', ChoiceType::class, array(
                 'choices' => array( 'M' => 'M','Mme'=>'Mme'),
@@ -38,59 +45,84 @@ class PersonneType extends AbstractType
             ])
             ->add('situationFamiliale', null, [
                 'attr' => [
+                    'placeholder' => 'Situation familiale ',
+
                     'title' => 'form.order.lastName.title', ],
             ])
             ->add('nombreEnfant', null, [
                 'attr' => [
+                    'placeholder' => 'Nombre d"Enfant ',
+
                     'title' => 'form.order.lastName.nombreEnfant',
                     ],
             ])
             ->add('email', null, [
                 'attr' => [
+                    'placeholder' => 'Email ',
+
                     'title' => 'form.order.email.title', ],
             ])
+
             ->add('telephone1', null, [
                 'attr' => [
+                    'placeholder' => 'Téléphone ',
+
                     'title' => 'form.order.telephone1.title', ],
             ])
+
             ->add('telephone2', null, [
                 'attr' => [
+                    'placeholder' => '2éme Téléphone ',
+
                     'title' => 'form.order.telephone2.title', ],
             ])
             ->add('mobile', null, [
                 'attr' => [
+                    'placeholder' => 'mobile ',
+
                     'title' => 'form.order.mobile.title', ],
             ])
             ->add('adresse', null, [
                 'attr' => [
+                    'placeholder' => 'Adresse ',
+
                     'title' => 'form.order.adresse.title', ],
             ])
             ->add('pays', null, [
                 'attr' => [
+                    'placeholder' => 'pays ',
+
                     'title' => 'form.order.pays.title', ],
             ])
             ->add('ville', null, [
                 'attr' => [
+                    'placeholder' => 'ville ',
+
                     'title' => 'form.order.ville.title', ],
             ])
             ->add('numRue', null, [
                 'attr' => [
+                    'placeholder' => 'N° de Rue ',
                     'title' => 'form.order.numRue.title', ],
             ])
             ->add('rue', null, [
                 'attr' => [
+                    'placeholder' => 'Rue ',
                     'title' => 'form.order.rue.title', ],
             ])
-            ->add('CodePostal', null, [
+            ->add('codePostal', null, [
                 'attr' => [
-                    'title' => 'form.order.CodePostal.title', ],
+                    'placeholder' => 'code postal ',
+                    'title' => 'form.order.codePostal.title', ],
             ])
             ->add('complementAdresse', null, [
                 'attr' => [
+                    'placeholder' => 'complement d"adresse ',
                     'title' => 'form.order.complementAdresse.title', ],
             ])
             ->add('motCle', null, [
                 'attr' => [
+                    'placeholder' => 'mot clés ',
                     'title' => 'form.order.motCle.title', ],
             ])
             ->add('commenataire', TextareaType::class, [

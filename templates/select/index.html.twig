@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SelectController!{% endblock %}
+    {% block stylesheets %}
+<link href="{{ asset('css/flags.css') }}" rel="stylesheet">
+    {% endblock %}
+{% block body %}
+    <div id="demo"
+         data-input-name="country"
+         data-selected-country="US"
+         data-button-size="btn-lg"
+         data-button-type="btn-warning"
+         data-scrollable="true"
+         data-scrollable-height="250px"
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/jquery.flagstrap.js') }}"></script>
+    <script>$('#demo').flagStrap();</script>
+    <script>$('#basic').flagStrap();</script>
+{% endblock %}

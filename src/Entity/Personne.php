@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PersonneRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -35,7 +37,7 @@ class Personne
 
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,nullable=true))
      */
     private $situationFamiliale;
 
@@ -114,6 +116,7 @@ class Personne
      */
     private $codePostal;
 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -156,17 +159,6 @@ class Personne
     }
 
 
-    public function getSituationFamiliale(): ?string
-    {
-        return $this->situationFamiliale;
-    }
-
-    public function setSituationFamiliale(string $situationFamiliale): self
-    {
-        $this->situationFamiliale = $situationFamiliale;
-
-        return $this;
-    }
 
     public function getNombreEnfant(): ?int
     {
@@ -188,6 +180,17 @@ class Personne
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+    public function getSituationFamiliale(): ?string
+    {
+        return $this->situationFamiliale;
+    }
+
+    public function setSituationFamiliale(string $situationFamiliale): self
+    {
+        $this->email = $situationFamiliale;
 
         return $this;
     }
@@ -347,4 +350,11 @@ class Personne
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->getSituationFamiliale();
+    }
+
+
 }
